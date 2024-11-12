@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Hoppen</title>
+    <link rel="stylesheet" href="homestyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    
+  <div class="navbar">
+    <a href="index.html" class="tab" onclick="setActive(event)">
+        <span class="icon" data-icon="􀎞" data-icon-active="􀎟">􀎟</span>
+        <span>Home</span>
+    </a>
+    <a href="config.html" class="tab active" onclick="setActive(event)">
+        <span class="icon" data-icon="􀍟" data-icon-active="􀍟">􀍟</span>
+       <span>Settings</span>
+    </a>
+</div>
+
+<script src="tabbar.js"></script>
+
+    <div class="encabezado">
+
+    <div class="pagetit">Settings
+    </div>
+    <div class="settings">
+    <div class="setbox">
+    <div class="setbox2">
+    <div class="configlabel">Theme</div>
+    </div>
+    <select id="theme-select" class="selecttheme" onchange="changeTheme()">
+        <option value="auto">Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dɑrk</option>
+    </select> 
+</div>
+<div class="setbox">
+    <div class="configlabel">Color ɑccent</div>
+
+      <select id="color-select" class="selecttheme" onchange="changeAccentColor()">
+        <option value="#F57260">Defɑult</option>
+        <option value="#EF4E61">Rojo</option>
+        <option value="#0076FF">Azul</option>
+        <option value="#02944E">Verde</option>
+        <option value="#AA5CCE">Púrpurɑ</option>
+      </select>
+    </div>
+</div>
+</script>
+    <script src="unammd.js">
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js').then((registration) => {
+              console.log('Service Worker registrado con éxito:', registration);
+            }).catch((error) => {
+              console.log('Error al registrar el Service Worker:', error);
+            });
+          });
+        }
+      </script>
+      </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+
+/* barra de navegación */
+.navbar {
+    width: 90%; /* O ajusta a lo que prefieras */
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 0px 0;
+    border-top: .6px solid #e0e0e5;
+}
+
+/* estilo de los tabs */
+.tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #8e8e93;
+    text-decoration: none;
+    flex: 1;
+    padding: 0px;
+    transition: color 0.3s, transform 0.1s;
+    font-size: 12px;
+    outline: none; /* quita el rectángulo de borde */
+    -webkit-tap-highlight-color: transparent; /* quita el efecto de clic lleno */
+}
+
+/* ícono unicode */
+.tab .icon {
+    font-size: 24px;
+    margin-bottom: 3px;
+    transition: color 0.3s;
+}
+
+/* estilo para la etiqueta (label) */
+.tab span {
+    font-size: 12px;
+}
+
+/* estilo de tab activo */
+.tab.active {
+    color: #e76f59;
+}
+.tab.active .icon {
+    color: #e76f59;
+}
+
+
+/* responsivo */
+@media (max-width: 500px) {
+    .navbar {
+        width: 100%;
+        padding: 21px 0;
+        padding-top: 3px;
+    }
+    .tab .icon {
+        font-family: "SF";
+        font-size: 25px;
+        font-weight: 400;
+    }
+    .tab span {
+        font-size: 11px;
+        font-weight: 500;
+    }
+}
+.inter {
+    font-family: "Inter", serif;
+  }
+
+  @font-face {
+    font-family: 'SF';
+    src: url('SF-Pro.ttf');
+}

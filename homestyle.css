@@ -1,0 +1,377 @@
+body {
+    display: flex;
+    overflow-x: hidden;
+    justify-content: center; /* Centra todo el contenido */
+    flex-direction: column; /* Evita problemas de alineación */
+}
+.inter {
+    font-family: "Inter", serif;
+  }
+
+  @font-face {
+    font-family: 'SF';
+    src: url('SF-Pro.ttf');
+}
+
+.homebar{
+    display: flex;
+    margin: 0px;
+}
+.newone{
+    float: right;
+    font-family: "SF";
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--accent-color);
+    cursor: pointer;
+}
+.pagetit{
+    font-family: "Inter";
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.contenedor {
+    font-family: "Inter", sans-serif;
+}
+.notes-container{
+    width: auto;
+    height: auto;
+}
+.note-container {
+    border: hidden;
+    padding: 5px 15px 20px 30px;
+    background-color: #faf5f5;
+    border-radius: 30px;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.note-container:hover {
+    background-color: #f7f7f7;
+    transition: 300ms;
+}
+.text-container {
+    flex: 1;
+    margin-right: 1;
+}
+.image-container {
+    margin-top: 10px;
+    margin-left: -16px;
+    flex-shrink: 0;
+}
+
+
+/* Estilo para el título de la nota */
+.note-title {
+    font-family: "Inter";
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0px;
+    height: 30px;
+}
+
+.notelayout {
+    display: flex;
+    flex-direction: column; /* Cambiado de row (por defecto) a column */
+}
+
+/* Estilo para la fecha de la nota */
+.note-date {
+    font-family: "Inter";
+    font-size: 16px;
+    color: #977f7f;
+}
+
+.note-time{
+    color: rgb(170, 150, 143);
+}
+
+/* Estilo para la descripción de la nota */
+.note-description {
+    font-size: 17px;
+    word-wrap: break-word; /* Permite que las palabras largas pasen a la siguiente línea */
+    word-break: break-word; /* Fuerza el corte de palabras si son demasiado largas */
+    white-space: normal; /* Asegura que el texto se ajuste y se envuelva en varias líneas */
+    color: #4d4444;
+    margin-right: 16px;
+    margin-top: 12px;
+    line-height: 26px;
+    font-family: "sf";
+}
+
+/* Estilo para la imagen de estado de ánimo */
+.note-mood {
+    display: block;
+    border: hidden;
+}
+
+.search {
+    float: center;
+    display: block;
+    background-color: #f7f7f7;
+    padding: 10px 15px;
+    border: hidden;
+    font-size: 18px;
+    border-radius: 12px;
+    margin-bottom: 0px;
+    font-family: "SF";
+    width: 90%; /* O ajusta a lo que prefieras */
+    max-width: 600px; /* Establece un ancho máximo para pantallas grandes */
+    color: var(--accent-color);
+}
+
+
+.search:focus{
+    border: hidden;
+    outline: none;
+}
+
+.search:focus::placeholder{
+    color: transparent;
+    transition: 100ms;
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Asegura que empiece desde el borde izquierdo */
+    right: 0; /* Asegura que termine en el borde derecho */
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Ajusta la distribución de los elementos en la barra */
+    background-color: #fcfcfc;
+    padding: 4px 10px 32px 10px; /* Da un poco de padding para ver mejor la alineación */
+    border-top: 0.6px solid #e0e0e5;
+}
+
+/* estilo de los tabs */
+.tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #8e8e93;
+    text-decoration: none;
+    flex: 1;
+    padding: 0px;
+    transition: color 0.3s, transform 0.1s;
+    font-size: 12px;
+    font-family: "SF";
+    outline: none;
+    -webkit-tap-highlight-color: transparent; /* quita el efecto de clic lleno */
+}
+
+/* ícono unicode */
+.tab .icon {
+    font-size: 23px;
+    margin-bottom: 2px;
+    transition: color 0.3s;
+    font-weight: 400;
+}
+
+/* estilo para la etiqueta (label) */
+.tab span {
+    font-size: 11px;
+    font-weight: 500;
+}
+
+/* estilo de tab activo */
+.tab.active {
+    color: var(--accent-color);
+}
+.tab.active .icon {
+    color: var(--accent-color);
+}
+
+.inter {
+    font-family: "Inter", serif;
+  }
+
+  @font-face {
+    font-family: 'SF';
+    src: url('SF-Pro.ttf');
+}
+
+.encabezado{
+    margin: 6%;
+    margin-bottom: 0px;
+}
+
+.allnotes{
+    margin:  7% 4%;
+    margin-bottom: 100px;
+}
+
+.mediumsub{
+    font-size: 28px;
+    text-align: center;
+    font-weight: 600;
+    font-family:'Inter';
+    margin-bottom: 10px;
+}
+.advice{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.advicedesc{
+    text-align: center;
+    color: #8e8e8e;
+    font-family: 'Inter';
+    font-size: 13px;
+}
+/* Estilos para el modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .navbar {
+    background-color: #1f1f1f;
+    border-top: 0.6px solid #333;
+}
+
+/*---------------------------------------------------------*/
+body.dark-mode .tab {
+    color: #808080;
+}
+
+body.dark-mode .tab.active {
+    color: var(--accent-color);
+}
+body.dark-mode .tab.active .icon{
+    color: var(--accent-color);
+}
+
+body.dark-mode .search{
+    color: var(--accent-color);
+}
+body.dark-mode .note-container {
+    background-color: #1f1f1f;
+    border-radius: 30px;
+}
+
+body.dark-mode .note-container:hover {
+    background-color: #3b3b3b;
+}
+
+body.dark-mode .note-title {
+    color: #ffffff;
+}
+
+body.dark-mode .note-date {
+    color: #727272;
+}
+
+body.dark-mode .note-time{
+    color: #5e5e5e;
+}
+
+body.dark-mode .note-description {
+    color: #838383;
+}
+
+body.dark-mode .search {
+    background-color: #1f1f1f;
+    color: white;
+}
+
+body.dark-mode .search::placeholder {
+    color: #575757;
+    letter-spacing: .3px;
+}
+
+/* Asegura que los íconos sean visibles */
+body.dark-mode .tab .icon {
+    color: #808080;
+}
+
+body.dark-mode .newone {
+    color: var(--accent-color);
+}
+
+/* Ajusta el tema del botón */
+#toggle-theme {
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.boxes{
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 16px;
+    border: none;
+    color: #727272;
+}
+.boxes:focus{
+    border: none;
+    outline: none;
+    
+}
+.configlabel {
+    float: left; /* Alinea la etiqueta a la izquierda */
+    margin-right: 10px; /* Da espacio entre la etiqueta y el select */
+    font-family: "SF";
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: 0.1px;
+    padding: 10px;
+  }
+  .selecttheme {
+    width: 130px;
+    float: right; /* Alinea el contenedor del select a la derecha */
+    background-color: #f6f6f6;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    color: #707070;
+    font-size: 16px;
+}
+.selecttheme:focus {
+    border: none;
+    outline: none;
+}
+
+  body.dark-mode .selecttheme {
+    background-color: #242424;
+
+}
+body.dark-mode .boxes {
+    color: #c0c0c0;
+
+}
+:root {
+    --accent-color: #F57260; /* Color predeterminado */
+  }
+
+.tab.active {
+    color: var(--accent-color);
+}
+
+.tab.active .icon {
+    color: var(--accent-color);
+}
+
+.search:focus {
+    caret-color: var(--accent-color);
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:10px;
+}
+.setbox {
+    width: 100%;
+    align-items: center;      /* centra en el eje horizontal */
+}
+  

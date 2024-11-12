@@ -1,0 +1,14 @@
+{
+    "name": "Hoppen Journal: Mindful moments",
+    "short_name":"Hoppen",
+    "star_url": "https://spicelui.github.comHoppen./",
+    "display": "standalone",
+    "theme_color":"FFFFFF",
+    "icons":[
+        {
+            "src":"icon.JPEG",
+            "sizes":"170x170",
+            "type": "image/png"
+        }
+    ]
+}

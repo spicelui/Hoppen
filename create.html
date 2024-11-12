@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New log</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <button class="save" id="save-btn">Sɑve</button>
+  <button id="export-btn" class="otbut">􀈂</button>
+  <button id="import-btn" class="otbut">􀈕</button>
+  <button id="delete-btn" class="delete" onclick="deleteNote()">􀈑</button>
+  <div class="labelbox">
+    <a class="label" href="index.html">􀆉 Bɑck</a>
+    </div>
+  <p></p>
+  
+<img id="main-image" src="imagenes/happy.png" alt="principal" class="main-img" onclick="openMenu()"><br>
+
+<input type="datetime-local" id="date" class="datee"><p></p>
+<!-- Ventana de selección de imágenes -->
+<div id="image-menu" class="image-menu">
+  <div class="menu-container">
+    <div class="image-grid">
+      <img src="imagenes/happy.png" alt=" 1" class="thumb" onclick="changeImage('imagenes/happy.png')">
+      <img src="imagenes/lovely.png" alt=" 2" class="thumb" onclick="changeImage('imagenes/lovely.png')">
+      <img src="imagenes/fine.png" alt=" 3" class="thumb" onclick="changeImage('imagenes/fine.png')">
+      <img src="imagenes/sleepy.png" alt=" 4" class="thumb" onclick="changeImage('imagenes/sleepy.png')">
+      <img src="imagenes/lazy.png" alt=" 5" class="thumb" onclick="changeImage('imagenes/lazy.png')">
+      <img src="imagenes/careless.png" alt=" 6" class="thumb" onclick="changeImage('imagenes/careless.png')">
+      <img src="imagenes/worried.png" alt=" 7" class="thumb" onclick="changeImage('imagenes/worried.png')">
+      <img src="imagenes/angry.png" alt=" 8" class="thumb" onclick="changeImage('imagenes/angry.png')">
+      <img src="imagenes/hopeless.png" alt=" 9" class="thumb" onclick="changeImage('imagenes/hopeless.png')">
+    </div>
+  </div>
+</div>
+<div class="page">
+<input type="text" id="title" maxlength="18" placeholder="Untitled" class="notetitle" oninput="replaceA(event); autoResize(this)"></input><p></p>
+<textarea id="description" class="notes" placeholder="Notes" oninput="replaceA(event); autoResize(this)"></textarea>
+<p></p>
+</div>
+<script src="unammd.js"></script>
+<script src="jstest.js"></script>
+<script src = "code.js"></script>
+</body>
+</html>

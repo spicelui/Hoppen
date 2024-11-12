@@ -1,0 +1,360 @@
+.inter {
+    font-family: "Inter", serif;
+  }
+  :root {
+    --accent-red: #ff5252;
+    --accent-green: #4caf50;
+    --accent-blue: #2196f3;
+    --accent-yellow: #ffeb3b;
+    --accent-purple: #9c27b0;
+    --background-color: #ffffff;
+    --text-color: #000000;
+}
+
+.dark-theme {
+    --accent-red: #ffa6a6;
+    --accent-green: #81c784;
+    --accent-blue: #64b5f6;
+    --accent-yellow: #fff176;
+    --accent-purple: #ba68c8;
+}
+.accent {
+  color: var(--accent-red); /* Color por defecto */
+}
+  @font-face {
+    font-family: 'SF';
+    src: url('SF-Pro.ttf');
+}
+.hidden {
+  display: none;
+}
+.subtitlewindow{
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.page{
+  margin: 4%;
+}
+/* Imagen principal */
+.main-img {
+    margin-left: 0px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+/* Ventana de selección de imágenes */
+.image-menu {
+    display: none; /* Oculta por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.212);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(0px); /* Inicia sin desenfoque */
+    -webkit-backdrop-filter: blur(0px); /* Inicia sin desenfoque */
+    transition: backdrop-filter 0.5s ease; /* Animación suave para el desenfoque */
+    opacity: 0; /* Inicia con opacidad 0 */
+    transition: opacity 0.4s ease; /* Animación de fundido (crossfade) */
+  }
+  
+  /* Ventana interna (contenido blanco) */
+  .menu-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    opacity: 0; /* Inicia con opacidad 0 */
+    transition: opacity 0.3s ease; /* Animación de fundido (crossfade) */
+  }
+  
+  /* Cuando se activa el menú, se agrega el desenfoque y el contenido se hace visible */
+  .image-menu.active {
+    backdrop-filter: blur(10px); /* Aplica el desenfoque cuando el menú está activo */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilidad con Safari */
+    opacity: 1; /* Se hace visible cuando se activa */
+  }
+  
+  .image-menu.active .menu-container {
+    opacity: 1; /* Hace visible el contenido de la ventana blanca */
+  }
+  
+  /* Contenedor de miniaturas */
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .thumb {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    border: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .thumb:hover {
+    transform: scale(1.1);
+  }
+.labelbox{
+  margin-top: 8px;
+  margin-bottom: 30px;
+}
+.label{
+    text-decoration: none;
+    font-family: "SF";
+    color: var(--accent-color);
+    font-size: 19px;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+.label:hover{
+  background-color: #f1f1f1;
+}
+
+  body{
+    padding: 10px;
+    justify-content: center;
+    font-family: "Inter";
+    background-color: #ffffff;
+  }
+
+  .datee{
+    font-family: "SF";
+    border: hidden;
+    background-color: #f7f7f7;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 11px;
+    font-size: 16px;
+    color: #727272;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .section{
+    font-style: normal;
+    margin-left: 10px;
+    margin-bottom: 24px;
+    font-weight: 600;
+    letter-spacing: -0.6px;
+    font-size: 19px;
+  }
+.mtv{
+    margin-right: 7px ;
+    margin-top: 10px;
+}
+
+.container{
+    background-color: #ffffff;
+    padding: 20px 20px 20px 20px;
+    margin: 20px;
+}
+
+.tag-container{
+    flex-wrap: wrap;
+    display: flex;
+    gap:10px;
+}
+
+.tag{
+    padding: 10px 15px;
+    border: hidden;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    transition: 200ms;
+    font-size: 16px;
+}
+.tag:hover{
+    background-color: #dbdbdb;
+    transition: 200ms;
+}
+selected{
+    background-color: #000000;
+}
+
+.notes{
+  color: var(--accent-color);
+  -webkit-tap-highlight-color: transparent; /* quita el efecto de clic lleno */
+    width: 97%;
+    font-family: "SF";
+    border: hidden;
+    background-color: transparent;
+    padding: 0px;
+    border-radius: 0px;
+    height: 30px;
+    resize: none;
+    font-size: 19px;
+    caret-color: #6d6d6d;
+    line-height: 28px;
+    overflow: hidden;
+    color: #5e5c59;
+    min-height: 2em;
+    overflow-y: hidden;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    outline: none;
+}
+
+.notes:focus{
+    outline: none;
+}
+
+.notes:focus::placeholder{
+    color: transparent;
+    transition: 200ms;
+}
+
+.notetitle{
+  color: var(--accent-color);
+  -webkit-tap-highlight-color: transparent; /* quita el efecto de clic lleno */
+    width: 97%;
+    height: 40px;
+    margin-top: 10px;
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 32px;
+    border: hidden;
+    background-color: transparent;
+    padding: 0px;
+    resize: none;
+    color: black;
+}
+
+.notetitle:focus{
+    outline: none;
+}
+
+.notetitle:focus::placeholder{
+    color: transparent;
+    transition: 200ms;
+}
+
+.delete{
+    float: right;
+    font-family: "SF";
+    font-size: 20px;
+    color: var(--accent-color);
+    background-color: #faecec;
+    padding: 10px 14px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #f55151;
+}
+.otbut{
+  float: right;
+  font-family: "SF";
+  font-size: 20px;
+  color: #000000;
+  background-color: #f7f7f7;
+  padding: 10px 14px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  font-weight: 400;
+}
+
+.save{
+    float: right;
+    text-decoration: none;
+    background-color: #000000;
+    border-radius: 30px;
+    padding: 10px 16px;
+    color: #ffffff;
+    text-align: right;
+    font-size: 17px;
+    cursor: pointer;
+    margin-bottom: 60px;
+    font-weight: 500;
+}
+/* Estilos para el modo oscuro */
+body.dark-mode {
+  background-color: #1d1d1d;
+  color: #ffffff;
+}
+
+body.dark-mode .save{
+  background-color: rgb(255, 255, 255);
+  border: none;
+  color: black;
+}
+body.dark-mode .otbut, body.dark-mode .delete {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+body.dark-mode .label{
+  color: var(--accent-color);
+}
+
+body.dark-mode .label:hover{
+  background-color: #333333;
+  transition: 140ms;
+}
+
+body.dark-mode .datee{
+  background-color: #313131;
+  color: #8a8a8a;
+}
+
+body.dark-mode .notetitle, body.dark-mode .notes {
+  color: #ffffff;
+}
+
+body.dark-mode .notetitle::placeholder, body.dark-mode .notes::placeholder {
+  color: #ffffff25;
+}
+
+body.dark-mode .image-menu {
+  background-color: #222;
+}
+
+body.dark-mode .menu-container {
+  background-color: #333;
+}
+
+body.dark-mode .image-grid {
+  background-color: #333;
+}
+
+body.dark-mode .thumb:hover {
+  filter: brightness(0.7);
+}
+
+
+body.dark-mode .delete{
+  float: right;
+  font-family: "SF";
+  font-size: 20px;
+  color:#f16e6e;
+  background-color: #442929;
+  padding: 10px 14px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+body.dark-mode #toggle-theme {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 24px;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
